@@ -64,3 +64,6 @@ d <-c("Platyrrhini
 e <- c("Cebidae", "Atelidae", "Pitheciidae", "Cercopithecidae", "Hylobatidae", "Hominidae")
 l <- list(a,b,c,d,e)
 l
+
+##Module 5: Data Frames##
+df <- read.csv("~/Desktop/random-people.csv", sep = ",", header = TRUE, stringsAsFactors = FALSE)
