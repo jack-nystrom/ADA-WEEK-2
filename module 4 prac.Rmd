@@ -62,3 +62,5 @@ d <-c("Platyrrhini
 ", "Lorisidae", "Galagidae", "Cheirogaleidae
 ", "Lepilemuridae","Indriidae","Lemuridae", "Daubentoniidae")
 e <- c("Cebidae", "Atelidae", "Pitheciidae", "Cercopithecidae", "Hylobatidae", "Hominidae")
+l <- list(a,b,c,d,e)
+l
