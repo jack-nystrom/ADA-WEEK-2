@@ -3,5 +3,13 @@ title: "Module 4 Challenges"
 output: html_document
 ---
 
-m <- matrix(data = c(1, 2, 3, 4), nrow = 2, ncol=2)
-m
+v1 <- c(1, 2, 3, 4)
+v2 <- c(6 ,7 ,8 ,9)
+m1 <- rbind(v1, v2)
+m1
+
+m2 <- cbind(v1, v2)
+m2
+
+a <- array( data = 1:90, dim = c(5, 6 ,3))
+a
