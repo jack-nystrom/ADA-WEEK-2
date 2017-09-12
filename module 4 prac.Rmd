@@ -13,3 +13,52 @@ m2
 
 a <- array( data = 1:90, dim = c(5, 6 ,3))
 a
+
+##Module 4 Challenge 1##
+##I'm having trouble with actually extracting the character data as opposed to only their position in the array.
+v <- array(data = "Stately, plump Buck Mulligan came from the stairhead, bearing a bowl of lather on which a mirror and a razor lay crossed.")
+
+challenge1 <- array(data = str_split("Stately, plump Buck Mulligan came from the stairhead, bearing a bowl of lather on which a mirror and a razor lay crossed.","",Inf))
+
+uString <- "Stately, plump Buck Mulligan came from the stairhead, bearing a bowl of lather on which a mirror and a razor lay crossed."
+
+noPunct <- gsub("[[:punct:]]","",uString)
+challenge1 <- array(data =str_split(noPunct,"",Inf))
+challenge1 <- seq(from = 1, to =nchar(noPunct), by = 3)
+challenge1
+
+##Module 4 Challenge 2##
+m <- matrix(data = 1:80, nrow = 8, ncol = 10, byrow = FALSE)
+m
+x <- m[,2]
+x <- m[,3]
+x <- m[,6]
+x <- m[6,]
+x <- m[8,]
+x <- m[2,2]
+x <- m[6,9]
+
+##Module 4 Challenge 3##
+a <- array(data = 1:400, dim=c(1,2,3,4),)
+a[1, 1, 1, 2]
+a[2, 3, 2, ]
+a[1:5, 1:5, 3, 3]
+
+##Module 4 Challenge 4##
+s <- c("this", "is", "a", "vector", "of", "strings")
+m <- matrix(data = 1:40, nrow = 5, ncol = 8)  # this is a matrix
+b <- FALSE
+l <- list(s, m, b)
+l
+str(l)
+
+##Module 4 Challenge 5##
+
+a <-c("Primates")
+b <- c("Haplorhini", "Strepsirhini")
+c <- c("Anthropoidea", "Tarsioidea", "Lorisoidea", "Lemuroidea")
+d <-c("Platyrrhini
+","Catarrhini", "Tarsiidae
+", "Lorisidae", "Galagidae", "Cheirogaleidae
+", "Lepilemuridae","Indriidae","Lemuridae", "Daubentoniidae")
+e <- c("Cebidae", "Atelidae", "Pitheciidae", "Cercopithecidae", "Hylobatidae", "Hominidae")
