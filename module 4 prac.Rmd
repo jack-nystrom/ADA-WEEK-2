@@ -1,0 +1,8 @@
+---
+title: "Module 4 Challenges"
+output: html_document
+---
+
+m <- matrix(data = c(1, 2, 3, 4), nrow = 2, ncol=2)
+m
+sagfsd
