@@ -16,16 +16,13 @@ a
 
 ##Module 4 Challenge 1##
 ##I'm having trouble with actually extracting the character data as opposed to only their position in the array.
-v <- array(data = "Stately, plump Buck Mulligan came from the stairhead, bearing a bowl of lather on which a mirror and a razor lay crossed.")
 
-challenge1 <- array(data = str_split("Stately, plump Buck Mulligan came from the stairhead, bearing a bowl of lather on which a mirror and a razor lay crossed.","",Inf))
+x <- "Stately, plump Buck Mulligan came from the stairhead, bearing a bowl of lather on which a mirror and a razor lay crossed."
+x2 <- ((gsub("[[:punct:]]"," ", x)))
+xspt <- c(unlist(strsplit(x2, " ")))
 
-uString <- "Stately, plump Buck Mulligan came from the stairhead, bearing a bowl of lather on which a mirror and a razor lay crossed."
-
-noPunct <- gsub("[[:punct:]]","",uString)
-challenge1 <- array(data =str_split(noPunct,"",Inf))
-challenge1 <- seq(from = 1, to =nchar(noPunct), by = 3)
-challenge1
+extract <- xspt[seq(from=3, to=22, by=3)]
+extract
 
 ##Module 4 Challenge 2##
 m <- matrix(data = 1:80, nrow = 8, ncol = 10, byrow = FALSE)
@@ -54,21 +51,57 @@ str(l)
 
 ##Module 4 Challenge 5##
 
-a <-c("Primates")
-b <- c("Haplorhini", "Strepsirhini")
-c <- c("Anthropoidea", "Tarsioidea", "Lorisoidea", "Lemuroidea")
-d <-c("Platyrrhini
-","Catarrhini", "Tarsiidae
-", "Lorisidae", "Galagidae", "Cheirogaleidae
-", "Lepilemuridae","Indriidae","Lemuridae", "Daubentoniidae")
-e <- c("Cebidae", "Atelidae", "Pitheciidae", "Cercopithecidae", "Hylobatidae", "Hominidae")
-l <- list(a,b,c,d,e)
-l
+#a <-c("Primates")
+#b <- c("Haplorhini", "Strepsirhini")
+#c <- c("Anthropoidea", "Tarsioidea", "Lorisoidea", "Lemuroidea")
+#d <-c("Platyrrhini
+#","Catarrhini", "Tarsiidae
+#", "Lorisidae", "Galagidae", "Cheirogaleidae
+#", "Lepilemuridae","Indriidae","Lemuridae", "Daubentoniidae")
+#e <- c("Cebidae", "Atelidae", "Pitheciidae", "Cercopithecidae", "Hylobatidae", "Hominidae")
+#l <- list(a,b,c,d,e)
+#l
 
-##Module 5: Data Frames##
 
-##Module 6: Challenge 6##
+platyrrhini <- c("cebidae", "atelidae", "pitheciidae")
+catarrhini <- c("cercopithecidae", "hylobatidae", "hominidae")
+tarsioidea <- c("tarsiidae")
+
+names(anthropoidea) <- c("anthropoidea")
+names(platyrrhini) <- c("platyrrhini")
+names(catarrhini) <- c("catarrhini")
+names(haplorhini) <- c("haplorhini")
+names(tarsioidea) <- c("tarsioidea")
+names(lorisoidea) <- c("lorisoidea")
+names(lemuroidea) <- c("lemuroidea")
+
+anthropoidea <- list( platyrrhini, catarrhini)
+haplorhini <- list(anthropoidea, tarsioidea)
+
+lorisoidea <- c("lorisidae", "galagidae")
+lemuroidea <- c("Cheirogaleidae
+", "Lepilemuridae
+", "Indriidae", "Lemuridae", "Daubentoniidae")
+
+strepsirhini <- list(lorisoidea, lemuroidea)
+names(strepsirhini) <- c("strepsirhini")
+primates <- list(strepsirhini, haplorhini)
+
+
+
+
+names(primates) <- c("primates")
+
+primates
+
+#maybe write the strepsirhini
+
+## s
+
+##Module 4: Last Challenge##
 m <- matrix(c(3, 0, 1 ,23, 1, 2, 33, 1, 1, 42, 0, 1, 41, 0, 2),nrow = 3, ncol=5, byrow = TRUE)
 
 data.frame(m)
-df(m)
+as.logical(m[,2])
+as.factor(m[,3])
+str(m)
